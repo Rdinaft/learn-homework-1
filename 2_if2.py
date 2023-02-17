@@ -16,11 +16,24 @@
 """
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+
+    print(comparison('ffd','ffd'))
+    print(comparison(2,'tt'))
+    print(comparison('learn','d'))
+    print(comparison('pytho','learn'))
+    print(comparison('pytho','learns'))
+
+def comparison(one, two):
+
+    if isinstance(one, str) and isinstance(two, str):
+      if one == two:
+        return '1'
+      elif len(str(one)) > len(str(two)):
+        return '2'
+      elif two == 'learn':
+        return '3'
+    else:
+      return '0'
+
 if __name__ == "__main__":
     main()
