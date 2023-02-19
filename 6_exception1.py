@@ -14,7 +14,6 @@ def hello_user():
    
     try:
         print('Здравствуй. Как дела?')
-
         while True:
             greetings = input('').capitalize()
             if greetings == 'Хорошо' or greetings == 'Нормально':
