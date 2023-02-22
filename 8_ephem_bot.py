@@ -25,13 +25,11 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
 
 def greet_user(update, context):
     text = 'Enter planet name:'
-    print(text)
     update.message.reply_text(text)
 
 
 def talk_to_me(update, context):
     user_planet = update.message.text.capitalize()
-    print(user_planet)
     time_now = datetime.datetime.now()
     if user_planet in str(ephem._libastro.builtin_planets()):
         planet = getattr(ephem, user_planet)(time_now)
